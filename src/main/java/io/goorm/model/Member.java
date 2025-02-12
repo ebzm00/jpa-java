@@ -23,6 +23,8 @@ public class Member {
     @Column(name = "member_name", nullable = false)
     private String memberName;
 
+    private String name;
+
     @CreationTimestamp
     @Column(name = "create_at")
     private LocalDateTime createAt;
@@ -61,5 +63,13 @@ public class Member {
 
     public void setVideos(List<Video> videos) {
         this.videos = videos;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
